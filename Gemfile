@@ -42,6 +42,7 @@ gem 'pundit'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'mysql2', '0.3.16'
 gem 'carrierwave', '~> 1.0'
+gem 'pg'
 
 gem 'pry-rails', :group => :development
 
