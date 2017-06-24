@@ -1,0 +1,30 @@
+<head>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">CR Money Management</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to "Home", root_path %></li>
+        profile_users
+        <% if current_user.present? %>
+          <li><%= link_to "Profile", profile_users_path %></li>
+          <% if current_user.trade_access == true %>
+            <li><%= link_to "Trades", trades_path %></li>
+          <% end %>
+        <% else %>
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+        <% end %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user.present? %>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: 'DELETE' %></li>
+        <% else %>
+          <li><%= link_to "Admin Login", new_admin_user_session_path %> </li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</head>
