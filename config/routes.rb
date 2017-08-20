@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :trades
+  resources :trades do
+    collection do
+        post :create_trade_via_ajax_request
+      end
+  end
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
