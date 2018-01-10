@@ -42,7 +42,8 @@ gem 'pundit'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'mysql2', '~> 0.3.20'
 gem 'carrierwave', '~> 1.0'
-gem 'pg'
+#gem 'pg'
+gem 'figaro'
 
 gem 'pry-rails', :group => :development
 
@@ -57,5 +58,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano', '~> 3.5.0'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rails', '~> 1.1.1'
+  gem 'capistrano-rvm', github: "capistrano/rvm"
+  
 end
 
