@@ -6,7 +6,6 @@
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to "Home", root_path %></li>
-        profile_users
         <% if current_user.present? %>
           <li><%= link_to "Profile", profile_users_path %></li>
           <% if current_user.trade_access == true %>
