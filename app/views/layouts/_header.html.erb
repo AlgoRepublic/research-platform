@@ -2,7 +2,7 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">CR Money Management</a>
+        <a class="navbar-brand" href="#">Axe Capital Research Team</a>
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to "Home", root_path %></li>
@@ -20,8 +20,8 @@
         <% if current_user.present? %>
           <li><%= link_to "Sign Out", destroy_user_session_path, method: 'DELETE' %></li>
         <% else %>
-          <li><%= link_to "Admin Login", new_admin_user_session_path %> </li>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
+          <!-- <li><%= link_to "Admin Login", new_admin_user_session_path %> </li> -->
+          <li><%= link_to "Trader Login", new_user_session_path %></li>
         <% end %>
       </ul>
     </div>

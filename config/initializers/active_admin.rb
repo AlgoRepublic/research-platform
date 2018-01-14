@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # for each of the active admin pages.
   #
   config.site_title = "Crm"
-
+  
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -16,7 +16,7 @@ ActiveAdmin.setup do |config|
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "logo.png"
+  config.site_title_image = "logo.png"
 
   # == Default Namespace
   #
@@ -119,7 +119,8 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.comments = false
+  config.comments = false
+
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
@@ -138,7 +139,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  # config.batch_actions = true
 
   # == Controller Filters
   #
@@ -178,7 +179,7 @@ ActiveAdmin.setup do |config|
   # resources or you can disable them globally from here.
   #
   # config.breadcrumb = false
-
+  config.breadcrumb = Proc.new{ [] }
   # == Create Another Checkbox
   #
   # Create another checkbox is disabled by default. You can customize it for individual
@@ -282,12 +283,16 @@ ActiveAdmin.setup do |config|
   # By default, the footer shows the current Active Admin version. You can
   # override the content of the footer here.
   #
-  # config.footer = 'my custom footer text'
+  config.footer = "Copyright #{Date.today.year} Axe Capital Research Team"
 
   # == Sorting
   #
-  # By default ActiveAdmin::OrderClause is used for sorting logic
+  # By default ActiveAdmin::OrderClauseis used for sorting logic
   # You can inherit it with own class and inject it for all resources
   #
   # config.order_clause = MyOrderClause
+
 end
+
+
+

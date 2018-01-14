@@ -1,8 +1,8 @@
-ActiveAdmin.register User do
+ActiveAdmin.register User, as: "Trader" do
   permit_params :email, :password, :password_confirmation,:first_name, :trade_access
 
 
-  index do
+  index :download_links => false do
     selectable_column
     id_column
     column :first_name
